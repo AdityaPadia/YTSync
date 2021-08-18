@@ -10,7 +10,7 @@ app.get("/", function(req, res){
 //404 Error route = *
 //Error route must always be at the end otherwise no routes will exist
 app.get("*", function(req, res){
-	res.send("Error! That route doesn't exist. You are lost");
+	res.render("error.ejs");
 });
 
 app.listen(3000, () => console.log("Node.js WebApp is now running on port 3000"));
